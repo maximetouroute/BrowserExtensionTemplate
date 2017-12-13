@@ -38,7 +38,7 @@ module.exports = function(env, argv) {
         entry: {
             content: "./src/content/content.js",
             background: "./src/background/background.js",
-            popup: "./src/popup/popup.js"
+            popup: "./src/popup/popup.jsx"
             // older versions of webpack may require an empty entry point declaration here
             // common: []
         },
@@ -61,6 +61,14 @@ module.exports = function(env, argv) {
                     loader: 'babel-loader',
                     query: {
                         presets: ['es2015']
+                    }
+                },
+                // React popup
+                {
+                    test: /\.jsx$/,
+                    loader: 'babel-loader',
+                    query: {
+                        presets: ['react']
                     }
                 }
             ]
