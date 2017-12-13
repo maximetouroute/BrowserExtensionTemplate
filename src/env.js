@@ -1,0 +1,1 @@
+export const browserExtensionPlatform = BROWSER_EXTENSION_PLATFORM;

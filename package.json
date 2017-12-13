@@ -1,0 +1,23 @@
+{
+  "name": "test-webpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack --config config/webpack.common.config.js",
+    "buildChrome": "webpack --config config/webpack.common.config.js --env.platform=chrome --env.buildTarget=dev",
+    "buildFirefox": "webpack --config config/webpack.common.config.js --env.platform=firefox --env.buildTarget=dev",
+    "deployChrome": "webpack --config config/webpack.common.config.js --env.platform=chrome --env.buildTarget=prod",
+    "deployFirefox": "webpack --config config/webpack.common.config.js --env.platform=firefox --env.buildTarget=prod"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "copy-webpack-plugin": "^4.2.3",
+    "webpack": "^3.10.0"
+  }
+}

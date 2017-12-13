@@ -1,0 +1,41 @@
+{
+  "manifest_version": 2,
+  "name": "Template Browser Extension",
+  "description": "TODO: add a description !",
+  "version": "0.0.0.1",
+  "browser_action": {
+    "default_popup": "./popup.html",
+    "default_title": "Template Browser Extension",
+    "default_icon": {
+      "128" : "./assets/icon_128.png"
+    }
+  },
+  "icons": {
+    "128" : "./assets/icon_128.png"
+  },
+  "background": {
+    "scripts": [
+      "./background.js"
+    ],
+    "persistent": true
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://127.0.0.1/*"
+      ],
+      "js": [
+        "./content.js"
+      ],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ],
+  "permissions": [],
+  "web_accessible_resources": [
+    "/assets/icon_128.png"
+  ],
+  "externally_connectable": {
+    "matches": ["*://127.0.0.1/*"]
+  }
+}
