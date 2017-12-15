@@ -14,8 +14,8 @@ Structuring a cross-browser extension project is a mess. So I made this simple a
 
 ## Set-up & Usage
 * `npm install`
-* Dev build : `npm buildChrome` or `npm run buildFirefox`
-* Prod build (uglified) : `npm deployChrome` or `npm run deployFirefox`
+* Dev build : `npm run buildChrome` or `npm run buildFirefox`
+* Prod build (uglified) : `npm run deployChrome` or `npm run deployFirefox`
 
 ## Handled platforms
 * Chrome
